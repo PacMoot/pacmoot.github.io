@@ -1,0 +1,67 @@
+baseURL: "https://pacmoot.github.io/"
+locale: en-us
+title: PacMoot
+theme: ["PaperMod"]
+
+enableRobotsTXT: true
+pagination:
+  pagerSize: 10
+
+# Required by the GitHub Pages workflow (keeps image cache in the right place)
+caches:
+  images:
+    dir: :cacheDir/images
+
+# JSON output powers the search page
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  title: PacMoot
+  description: "Write-ups from learning low-level security from scratch."
+  author: PacMoot
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowToc: true
+  TocOpen: false
+
+  homeInfoParams:
+    Title: "PacMoot"
+    Content: >
+      Notes and write-ups from learning low-level security from scratch:
+      C, reverse engineering, exploitation and embedded systems.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/PacMoot"
+    - name: rss
+      url: "index.xml"
+
+  assets:
+    disableHLJS: true
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 10
+    - name: Archive
+      url: /archives/
+      weight: 20
+    - name: Tags
+      url: /tags/
+      weight: 30
+    - name: Search
+      url: /search/
+      weight: 40
+
+markup:
+  highlight:
+    noClasses: false
